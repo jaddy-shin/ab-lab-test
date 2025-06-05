@@ -1,0 +1,15 @@
+{
+  "originHash" : "58445844fb382894b92d52f3b6c68439bb2bab5936abc812ebfd6de2bf053a1d",
+  "pins" : [
+    {
+      "identity" : "tiara-sdk-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.daumkakao.com/tiara/tiara-sdk-ios.git",
+      "state" : {
+        "revision" : "6fff591db62e6201407afdec560728530edbb497",
+        "version" : "1.2.0"
+      }
+    }
+  ],
+  "version" : 3
+}

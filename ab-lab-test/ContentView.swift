@@ -6,14 +6,27 @@
 //
 
 import SwiftUI
+import TiaraSDK
 
 struct ContentView: View {
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Button(action: {
+                initId()
+            }) {
+                Text("id 변경")
+            }
+            Button(action: {
+                trackPage()
+            }) {
+                Text("로그 전송")
+            }
+            Button(action: {
+                flush()
+            }) {
+                Text("flush")
+            }
         }
         .padding()
     }

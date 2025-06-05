@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		05EFE7DC2DF0490B00D86A7D /* TiaraSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 05EFE7DB2DF0490B00D86A7D /* TiaraSDK */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		05EFE7B92DF03F3900D86A7D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -29,9 +33,22 @@
 		05EFE7C22DF03F3900D86A7D /* ab-lab-testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ab-lab-testUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		05EFE7E02DF1470C00D86A7D /* Exceptions for "ab-lab-test" folder in "ab-lab-test" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 05EFE7A72DF03F3800D86A7D /* ab-lab-test */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		05EFE7AA2DF03F3800D86A7D /* ab-lab-test */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				05EFE7E02DF1470C00D86A7D /* Exceptions for "ab-lab-test" folder in "ab-lab-test" target */,
+			);
 			path = "ab-lab-test";
 			sourceTree = "<group>";
 		};
@@ -52,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05EFE7DC2DF0490B00D86A7D /* TiaraSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +130,7 @@
 			);
 			name = "ab-lab-test";
 			packageProductDependencies = (
+				05EFE7DB2DF0490B00D86A7D /* TiaraSDK */,
 			);
 			productName = "ab-lab-test";
 			productReference = 05EFE7A82DF03F3800D86A7D /* ab-lab-test.app */;
@@ -195,6 +214,9 @@
 			);
 			mainGroup = 05EFE79F2DF03F3800D86A7D;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				05EFE7DA2DF0490B00D86A7D /* XCRemoteSwiftPackageReference "tiara-sdk-ios" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 05EFE7A92DF03F3800D86A7D /* Products */;
 			projectDirPath = "";
@@ -398,6 +420,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ab-lab-test/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ab-lab-test/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -426,6 +449,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ab-lab-test/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ab-lab-test/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -552,6 +576,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		05EFE7DA2DF0490B00D86A7D /* XCRemoteSwiftPackageReference "tiara-sdk-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.daumkakao.com/tiara/tiara-sdk-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		05EFE7DB2DF0490B00D86A7D /* TiaraSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 05EFE7DA2DF0490B00D86A7D /* XCRemoteSwiftPackageReference "tiara-sdk-ios" */;
+			productName = TiaraSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 05EFE7A02DF03F3800D86A7D /* Project object */;
 }

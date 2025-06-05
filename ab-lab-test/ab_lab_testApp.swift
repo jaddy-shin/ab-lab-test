@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import TiaraSDK
 
 @main
 struct ab_lab_testApp: App {
@@ -13,5 +14,13 @@ struct ab_lab_testApp: App {
         WindowGroup {
             ContentView()
         }
+    }
+}
+
+class AppDelegate: NSObject, UIApplicationDelegate {
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        initTiaraTracker()
+        return true
     }
 }
