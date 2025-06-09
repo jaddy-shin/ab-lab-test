@@ -15,7 +15,7 @@ struct ContentView: View {
             Button(action: {
                 initId()
             }) {
-                Text("id 변경")
+                Text("id 초기화 후 종료")
             }
             Button(action: {
                 trackPage()

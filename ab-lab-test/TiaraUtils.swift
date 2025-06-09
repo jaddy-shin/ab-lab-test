@@ -19,12 +19,14 @@ func initId() {
 
 }
 
+var tracker : TiaraTracker? = nil
+
 
 func initTiaraTracker() {
     TiaraTracker.initialize(configuration: configuration)
     var instanceConfiguration = TiaraInstanceConfiguration()
     instanceConfiguration.isDebugLoggerEnabled = true
-    TiaraTracker.newInstance(svcDomain: "svc.domain", configuration: instanceConfiguration)
+    tracker = TiaraTracker.newInstance(svcDomain: "optimize.kakaocorp.com", configuration: instanceConfiguration)
 }
 
 
@@ -36,17 +38,18 @@ var configuration: TiaraGlobalConfiguration {
     var globalConfiguration = TiaraGlobalConfiguration()
     globalConfiguration.deployment = .sandbox
             globalConfiguration.sessionTimeout = 5
-            globalConfiguration.cookieDomains = ["domain1.com", "domain2.com"]
+            globalConfiguration.cookieDomains = ["optimize.kakaocorp.com"]
     return globalConfiguration
 }
 
 func trackPage() {
-    let tracker = TiaraTracker.getInstance(svcDomain: "svc.domain")
-    tracker?.trackPage(name: "테스트", kind: nil, log: nil)
+    var log = TiaraLog(page: "테스트")
+    log.setExperiment(experimentKey: "eatawtawt", variationKey: "rgaer", idType: .uuid)
+    tracker?.trackPage(name: "테스트", kind: nil, log: log)
 }
 
 func flush() {
     print("flush")
-    let tracker = TiaraTracker.getInstance(svcDomain: "svc.domain")
+    print(tracker)
     tracker?.flush()
 }
