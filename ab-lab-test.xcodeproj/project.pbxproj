@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		05EFE7DC2DF0490B00D86A7D /* TiaraSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 05EFE7DB2DF0490B00D86A7D /* TiaraSDK */; };
+		05EFE7E32DF6EEF000D86A7D /* TiaraAB-SDK in Frameworks */ = {isa = PBXBuildFile; productRef = 05EFE7E22DF6EEF000D86A7D /* TiaraAB-SDK */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05EFE7E32DF6EEF000D86A7D /* TiaraAB-SDK in Frameworks */,
 				05EFE7DC2DF0490B00D86A7D /* TiaraSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -131,6 +133,7 @@
 			name = "ab-lab-test";
 			packageProductDependencies = (
 				05EFE7DB2DF0490B00D86A7D /* TiaraSDK */,
+				05EFE7E22DF6EEF000D86A7D /* TiaraAB-SDK */,
 			);
 			productName = "ab-lab-test";
 			productReference = 05EFE7A82DF03F3800D86A7D /* ab-lab-test.app */;
@@ -216,6 +219,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				05EFE7DA2DF0490B00D86A7D /* XCRemoteSwiftPackageReference "tiara-sdk-ios" */,
+				05EFE7E12DF6EEF000D86A7D /* XCRemoteSwiftPackageReference "ab-sdk-ios" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 05EFE7A92DF03F3800D86A7D /* Products */;
@@ -586,6 +590,14 @@
 				minimumVersion = 1.2.0;
 			};
 		};
+		05EFE7E12DF6EEF000D86A7D /* XCRemoteSwiftPackageReference "ab-sdk-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.daumkakao.com/tiara/ab-sdk-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -593,6 +605,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 05EFE7DA2DF0490B00D86A7D /* XCRemoteSwiftPackageReference "tiara-sdk-ios" */;
 			productName = TiaraSDK;
+		};
+		05EFE7E22DF6EEF000D86A7D /* TiaraAB-SDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 05EFE7E12DF6EEF000D86A7D /* XCRemoteSwiftPackageReference "ab-sdk-ios" */;
+			productName = "TiaraAB-SDK";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

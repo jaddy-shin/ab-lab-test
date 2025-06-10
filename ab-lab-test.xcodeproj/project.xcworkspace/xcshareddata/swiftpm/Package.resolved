@@ -1,6 +1,15 @@
 {
-  "originHash" : "58445844fb382894b92d52f3b6c68439bb2bab5936abc812ebfd6de2bf053a1d",
+  "originHash" : "3b66220201d501b14805a0e35708ed7b724ba82f339e15ccec0881ac9976761c",
   "pins" : [
+    {
+      "identity" : "ab-sdk-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.daumkakao.com/tiara/ab-sdk-ios",
+      "state" : {
+        "revision" : "a53ad5446b3e3ee97f248dd28094bb2a7e6a4ac7",
+        "version" : "2.0.0"
+      }
+    },
     {
       "identity" : "tiara-sdk-ios",
       "kind" : "remoteSourceControl",
