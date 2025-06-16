@@ -45,8 +45,8 @@ func initTiaraABFactory() {
     let config = TiaraABFactoryConfig.Builder()
         .set(errorHandler: NoOpErrorHandler())
         .set(isRunning: true)
-        .set(isUpdateConfigImmediately: false)
-        .set(isOnPolling: false)
+        .set(isUpdateConfigImmediately: true)
+        .set(isOnPolling: true)
         .set(pollingIntervalSeconds: TimeInterval(15 * 60))
         .build(serviceId: serviceId, deploy: Deploy.sandbox)
     
@@ -61,7 +61,10 @@ func getVariation(experimentKey: String, gender: TiaraABTargetGender = .unknown,
 
 
 var tuid: String {
-    userDefaults?.string(forKey: "tuid") ?? ""
+    get {
+        return userDefaults?.string(forKey: "tuid") ?? ""
+    }
+    
 }
 
 var configuration: TiaraGlobalConfiguration {

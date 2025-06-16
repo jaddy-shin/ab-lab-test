@@ -119,7 +119,7 @@ struct ContentView: View {
                         Text(variation2)
                     }
                     Button(action: {
-                        variation2 = getVariation(experimentKey: experimentKey3, gender: experiment2SelectedGender, age: experiment2SelectedAge, custom: ("test", experiment2SelectedCustom))?.key ?? "없음"
+                        variation2 = getVariation(experimentKey: experimentKey2, gender: experiment2SelectedGender, age: experiment2SelectedAge, custom: ("test", experiment2SelectedCustom))?.key ?? "없음"
                     }) {
                         Text("variation 새로고침")
                     }
